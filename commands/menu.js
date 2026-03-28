@@ -85,7 +85,7 @@ export default async function info(client, message) {
 
     
 let menu = `
-DigiX Crew 🎯
+WENS_DM 🎯
 ────────────
 • Prefix   : ${prefix}
 • User     : ${stylizedChar(userName)}
