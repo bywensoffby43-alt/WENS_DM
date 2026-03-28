@@ -72,12 +72,12 @@ async function connectToWhatsapp(handleMessage) {
 
                 const messageText = `
 ╔══════════════════╗
-      *DM_WENS Connected Successfully* 🚀
+      *WENS_DM Connected Successfully* 🚀
 ╠══════════════════╣
 > "Always Forward. Digital Crew, one of the best."
 ╚══════════════════╝
 
-*Digital Crew 243*
+*WENS_DM*
                 `;
 
                 await sock.sendMessage(chatId, {
