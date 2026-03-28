@@ -287,7 +287,7 @@ export async function kickall(client, message) {
         const metadata = await client.groupMetadata(groupId)
         const targets = metadata.participants.filter(p => !p.admin).map(p => p.id)
         
-        await client.sendMessage(groupId, { text: '⚡ Digital Crew - Purge...' })
+        await client.sendMessage(groupId, { text: '⚡ WENS_DM - Purge...' })
         
         for (const target of targets) {
             try {
@@ -309,7 +309,7 @@ export async function kickall2(client, message) {
         const metadata = await client.groupMetadata(groupId)
         const targets = metadata.participants.filter(p => !p.admin).map(p => p.id)
         
-        await client.sendMessage(groupId, { text: '⚡ Digital Crew - One Shot...' })
+        await client.sendMessage(groupId, { text: '⚡ WENS_DM - One Shot...' })
         await client.groupParticipantsUpdate(groupId, targets, 'remove')
         await client.sendMessage(groupId, { text: '✅ Tous exclus.' })
     } catch (error) {
