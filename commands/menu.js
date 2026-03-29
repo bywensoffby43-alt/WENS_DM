@@ -122,7 +122,7 @@ menu += `┗━━━━━━━━━━━━━━━
           contextInfo: {
             participant: "0@s.whatsapp.net",
             remoteJid: "status@broadcast",
-            quotedMessage: { conversation: " Digix Crew" },
+            quotedMessage: { conversation: " WENS_DM" },
             isForwarded: true
           }
         });
@@ -130,7 +130,7 @@ menu += `┗━━━━━━━━━━━━━━━
         await client.sendMessage(
           remoteJid,
           {
-            video: { url: "database/DigiX.mp3" },
+            video: { url: "database/DigiX.mp4" },
             caption: stylizedChar(menu)
           },
           { quoted: message }
