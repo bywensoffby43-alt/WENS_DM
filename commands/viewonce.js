@@ -1,4 +1,4 @@
-import { WENS_DM } from '../utils/WENS_DM.js';
+import { DigixNew } from '../utils/DigixNew.js';
 import { downloadMediaMessage } from 'baileys';
 import fs from 'fs';
 import path from 'path';
@@ -13,7 +13,7 @@ export async function viewonce(client, message) {
         return;
     }
 
-    const content = WENS_DM(quotedMessage);
+    const content = DigixNew(quotedMessage);
 
     function modifyViewOnce(obj) {
         if (typeof obj !== 'object' || obj === null) return;
