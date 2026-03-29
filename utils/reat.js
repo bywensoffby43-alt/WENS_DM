@@ -18,7 +18,7 @@ export default async function react(client, message){
 
     )
 
-    await sleep(1000
+    await sleep(1000)
 
     await client.sendMessage(remoteJid, 
 
