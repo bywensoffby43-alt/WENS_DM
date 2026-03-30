@@ -85,7 +85,7 @@ export default async function info(client, message) {
 
     
 let menu = `
-WENS_DM 🎯
+WENS_DM-V1 🇭🇹
 ────────────
 • Prefix   : ${prefix}
 • User     : ${stylizedChar(userName)}
