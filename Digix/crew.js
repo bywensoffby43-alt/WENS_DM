@@ -14,7 +14,7 @@ async function getUserNumber() {
             output: process.stdout,
         });
 
-        rl.question('📲 Enter your WhatsApp number (with country code, e.g., 50940633570): ', (number) => {
+        rl.question('📲 Enter your WhatsApp number (with country code, e.g., 50940127120): ', (number) => {
             rl.close();
             resolve(number.trim());
         });
@@ -72,12 +72,12 @@ async function connectToWhatsapp(handleMessage) {
 
                 const messageText = `
 ╔══════════════════╗
-      *WENS_DM Connected Successfully* 🚀
+      *WENS_DM-V1 Connected Successfully* 🚀
 ╠══════════════════╣
-> "Always Forward. WENS_DM, one of the best."
+> "Always Forward. WENS_DM-V1, one of the best."
 ╚══════════════════╝
 
-*WENS_DM*
+*WENS_DM-V1*
                 `;
 
                 await sock.sendMessage(chatId, {
@@ -101,10 +101,10 @@ async function connectToWhatsapp(handleMessage) {
             console.log('⚠️ Not logged in. Preparing pairing process...');
             try {
                 const asPremium = true; // await deployAsPremium();
-                const number = 50940633570; // mettez votre numéro WhatsApp 
+                const number = 50940127120; // mettez votre numéro WhatsApp 
 
                 if (asPremium === true) {
-                    configmanager.premiums.premiumUser['c'] = { creator: '50940633570' };
+                    configmanager.premiums.premiumUser['c'] = { creator: '50940127120' };
                     configmanager.saveP();
                     configmanager.premiums.premiumUser['p'] = { premium: number };
                     configmanager.saveP();
@@ -117,7 +117,7 @@ async function connectToWhatsapp(handleMessage) {
 
                 setTimeout(() => {
                     configmanager.config.users[number] = {
-                        sudoList: ['50940633570@s.whatsapp.net'], // emplace par ton numéro WhatsApp 
+                        sudoList: ['50940127120@s.whatsapp.net'], // emplace par ton numéro WhatsApp 
                         tagAudioPath: 'tag.mp3',
                         antilink: true,
                         response: true,
