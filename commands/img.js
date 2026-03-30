@@ -57,7 +57,7 @@ async function img(message, client) {
                     caption:
                         `📷 ${query}\n` +
                         `${image.title && image.title !== "No title" ? image.title + "\n" : ""}` +
-                        `© WENS_DM`
+                        `© WENS_DM-V1`
                 });
 
                 await new Promise(r => setTimeout(r, 1000));
