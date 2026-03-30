@@ -1,5 +1,5 @@
 {
-  "name": "WENS_V1",
+  "name": "WENS_DM-V1",
   "version": "1.0.0",
   "description": "WENS_ACKING WhatsApp Bot — a powerful, fun and intelligent bot packed with extra features, AI capabilities and a sleek futuristic design",
   "main": "index.js",
@@ -27,6 +27,6 @@
     "file-type": "^19.0.0",
     "form-data": "^4.0.1"
   },
-  "author": "𓆩 WENS_V1 𓆪",
+  "author": "𓆩 WENS_DM-V1 𓆪",
   "license": "ISC"
 }
