@@ -8,7 +8,7 @@ export async function photo(client, message) {
         
         if (!target) {
             return await client.sendMessage(message.key.remoteJid, {
-                text: '📸 *WENS_DM*\n\nRépondez à un sticker pour le convertir en image.\n\nUsage: .photo (réponse à un sticker)'
+                text: '📸 *WENS_DM-V1*\n\nRépondez à un sticker pour le convertir en image.\n\nUsage: .photo (réponse à un sticker)'
             })
         }
 
@@ -20,7 +20,7 @@ export async function photo(client, message) {
 
         await client.sendMessage(message.key.remoteJid, {
             image: fs.readFileSync(filename),
-            caption: '✨ WENS_DM'
+            caption: '✨ WENS_DM-V1'
         })
 
         fs.unlinkSync(filename)
@@ -40,7 +40,7 @@ export async function tomp3(client, message) {
         
         if (!target) {
             return await client.sendMessage(message.key.remoteJid, {
-                text: '🎵 *WENS_DM*\n\nRépondez à une vidéo pour extraire l\'audio.\n\nUsage: .toaudio (réponse à une vidéo)'
+                text: '🎵 *WENS_DM-V1*\n\nRépondez à une vidéo pour extraire l\'audio.\n\nUsage: .toaudio (réponse à une vidéo)'
             })
         }
 
