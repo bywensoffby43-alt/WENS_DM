@@ -29,6 +29,7 @@ import { pingTest } from "../commands/ping.js"
 import auto from '../commands/auto.js'
 import uptime from '../commands/uptime.js'
 import wens from '../commands/wens.js'
+import silence from '../commands/silence.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -220,6 +221,11 @@ break
                     await react(client, message)
                     await group.promote(client, message)
                     break
+
+case 'silence': // @cat: bug
+await react(client, message)
+await silence(client, message)
+break
 
                 case 'demote': // @cat: group
                     await react(client, message)
