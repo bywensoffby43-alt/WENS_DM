@@ -45,12 +45,12 @@ export default async function goldenCommand(client, message) {
 ├─────────────────────────────────────────────┤
 │                                             │
 │  📌 Utilisation :                           │
-│  .golden <question>                         │
+│  .wens <question>                         │
 │                                             │
 │  💡 Exemples :                              │
-│  .golden Quelle est la capitale de la France│
-│  .golden Raconte une blague                 │
-│  .golden Explique-moi la relativité         │
+│  .wens Quelle est la capitale de la France│
+│  .wens Raconte une blague                 │
+│  .wens Explique-moi la relativité         │
 │                                             │
 │  ⚡ Fonctionnalités :                       │
 │  ▸ IA puissante (GPT-4o)                    │
