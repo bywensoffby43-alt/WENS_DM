@@ -58,7 +58,7 @@ export default async function goldenCommand(client, message) {
 │  ▸ Gratuit et illimité                      │
 │                                             │
 ├─────────────────────────────────────────────┤
-│  XD WENS 🌹| BY WENS 🌹🥃           │
+│  WENS DM 🌹| BY WENS 🌹🥃           │
 ╰─────────────────────────────────────────────╯`
         await client.sendMessage(remoteJid, { text: help }, { quoted: message })
         return
@@ -107,7 +107,7 @@ export default async function goldenCommand(client, message) {
 │  ${answer}
 │                                             │
 ├─────────────────────────────────────────────┤
-│ XD WENS 🌹| BY WENS 🌹           │
+│ WENS DM 🌹| BY WENS 🌹           │
 ╰─────────────────────────────────────────────╯`
 
             await client.sendMessage(remoteJid, { text: resultMessage }, { quoted: message })
@@ -129,7 +129,7 @@ export default async function goldenCommand(client, message) {
 │  Réessaie dans quelques instants.          │
 │                                             │
 ├─────────────────────────────────────────────┤
-│  XD WENS 🌹| BY WENS 🌹          │
+│  WENS DM 🌹| BY WENS 🌹          │
 ╰─────────────────────────────────────────────╯`
         
         await client.sendMessage(remoteJid, { text: errorMessage }, { quoted: message })
