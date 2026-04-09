@@ -180,7 +180,7 @@ break
                     await media.tomp3(client, message)
                     break
 
-case 'save2': // @cat: group
+case 'save2': // @cat: media
 await react(client, message)
 await save2(client, message)
 break
