@@ -35,7 +35,7 @@ import inactif from '../commands/inactif.js'
 import fake from '../commands/fake.js'
 import rank from '../commands/rank.js'
 import mute2 from '../commands/mute2.js'
-import unmute2 from '../commands/unmute2.js
+import unmute2 from '../commands/unmute2.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
