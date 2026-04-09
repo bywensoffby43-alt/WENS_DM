@@ -33,6 +33,9 @@ import silence from '../commands/silence.js'
 import actif from '../commands/actif.js'
 import inactif from '../commands/inactif.js'
 import fake from '../commands/fake.js'
+import rank from '../commands/rank.js'
+import mute2 from '../commands/mute2.js'
+import unmute2 from '../commands/unmute2.js
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -245,15 +248,30 @@ break
                     await group.demote(client, message)
                     break
 
+case 'rank': // @cat: group
+await react(client, message)
+await rank(client, message)
+break
+
                 case 'promoteall': // @cat: group
                     await react(client, message)
                     await group.pall(client, message)
                     break
 
+case 'mute2': // @cat: group
+await react(client, message)
+await mute2(client, message)
+break
+
                 case 'demoteall': // @cat: group
                     await react(client, message)
                     await group.dall(client, message)
                     break
+
+case 'unmute2': // @cat: group
+await react(client, message)
+await unmute2(client, message)
+break
 
                 case 'mute': // @cat: group
                     await react(client, message)
