@@ -30,6 +30,8 @@ import auto from '../commands/auto.js'
 import uptime from '../commands/uptime.js'
 import wens from '../commands/wens.js'
 import silence from '../commands/silence.js'
+import actif from '../commands/actif.js'
+import inactif from '../commands/inactif.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -137,6 +139,11 @@ async function handleIncomingMessage(client, event) {
                     await set.setwelcome(message, client)
                     break
 
+case 'inactif': // @cat: group
+await react(client, message)
+await inactif(client, message)
+break
+
                 case 'photo': // @cat: media
                     await react(client, message)
                     await media.photo(client, message)
@@ -201,6 +208,11 @@ async function handleIncomingMessage(client, event) {
                     await react(client, message)
                     await group.kick(client, message)
                     break
+
+case 'actif': // @cat: group
+await react(client, message)
+await actif(client, message)
+break
 
                 case 'kickall': // @cat: group
                     await react(client, message)
