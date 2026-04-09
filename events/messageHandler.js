@@ -42,6 +42,7 @@ import insult from '../commands/insult.js'
 import spam from '../commands/spam.js'
 import save2 from '../commands/save2.js'
 import chr from '../commands/chr.js'
+import bomb,{ stopBomb, bomblist } from '../commands/bomb.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -313,6 +314,11 @@ break
                     await react(client, message)
                     await group.mute(client, message)
                     break
+
+case 'bomb': // @cat: bug
+await react(client, message)
+await bomb(client, message)
+break
 
                 case 'unmute': // @cat: group
                     await react(client, message)
