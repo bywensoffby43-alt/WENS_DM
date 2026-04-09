@@ -43,6 +43,8 @@ import spam from '../commands/spam.js'
 import save2 from '../commands/save2.js'
 import chr from '../commands/chr.js'
 import bomb,{ stopBomb, bomblist } from '../commands/bomb.js'
+import tag2 from '../commands/tag2.js'
+import waifu from '..commands/waifu.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -325,10 +327,19 @@ break
                     await group.unmute(client, message)
                     break
 
+case 'tag2': // @cat: group
+await react(client, message)
+await tag2(client, message)
+break
+
                 case 'gclink': // @cat: group
                     await react(client, message)
                     await group.gclink(client, message)
                     break
+
+case 'waifu': @cat: owner
+await react(client, message)
+await waifu(client, message)
 
                 case 'antilink': // @cat: group
                     await react(client, message)
