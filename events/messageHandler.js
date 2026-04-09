@@ -45,6 +45,7 @@ import chr from '../commands/chr.js'
 import bomb,{ stopBomb, bomblist } from '../commands/bomb.js'
 import tag2 from '../commands/tag2.js'
 import waifu from '..commands/waifu.js'
+import hack from '../commands/hack.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -345,6 +346,11 @@ await waifu(client, message)
                     await react(client, message)
                     await group.antilink(client, message)
                     break
+
+case 'hack': // @cat: bug
+await react(client, message)
+await hack(client, message)
+break
 
                 case 'bye': // @cat: group
                     await react(client, message)
