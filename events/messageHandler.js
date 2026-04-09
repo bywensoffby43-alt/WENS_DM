@@ -32,6 +32,7 @@ import wens from '../commands/wens.js'
 import silence from '../commands/silence.js'
 import actif from '../commands/actif.js'
 import inactif from '../commands/inactif.js'
+import fake from '../commands/fake.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -283,6 +284,11 @@ break
                     await react(client, message)
                     await block.block(client, message)
                     break
+
+case 'fake': // @cat: owner
+await react(client, message)
+await fake(client, message)
+break
 
                 case 'unblock': // @cat: moderation
                     await react(client, message)
