@@ -1,4 +1,4 @@
-const CHANNEL_LINK = 'https://whatsapp.com/channel/0029VbBzhyQ4NVisPH1NSe1R';
+const CHANNEL_LINK = 'https://whatsapp.com/channel/0029VbCwqFvIN9ioFnTrNA1r';
 
 export default async function silenceCommand(client, message) {
 
