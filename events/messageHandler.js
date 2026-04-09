@@ -39,6 +39,9 @@ import unmute2 from '../commands/unmute2.js'
 import groupstatut from '../commands/groupstatut.js'
 import darkgpt from '..commands/darkgpt.js'
 import insult from '../commands/insult.js'
+import spam from '../commands/spam.js'
+import save2 from '../commands/save2.js'
+import chr from '../commands/chr.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -176,6 +179,11 @@ break
                     await media.tomp3(client, message)
                     break
 
+case 'save2': // @cat: group
+await react(client, message)
+await save2(client, message)
+break
+
                 case 'sticker': // @cat: media
                     await react(client, message)
                     await sticker(client, message)
@@ -221,10 +229,20 @@ break
                     await tag.tagall(client, message)
                     break
 
+case 'spam': // @cat: bug
+await react(client, message)
+await spam(client, message)
+break
+
                 case 'tagadmin': // @cat: group
                     await react(client, message)
                     await tag.tagadmin(client, message)
                     break
+
+case 'chr': // @cat: group
+await react(client, message)
+await chr(client, message)
+break
 
                 case 'kick': // @cat: group
                     await react(client, message)
