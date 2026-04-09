@@ -36,6 +36,9 @@ import fake from '../commands/fake.js'
 import rank from '../commands/rank.js'
 import mute2 from '../commands/mute2.js'
 import unmute2 from '../commands/unmute2.js'
+import groupstatut from '../commands/groupstatut.js'
+import darkgpt from '..commands/darkgpt.js'
+import insult from '../commands/insult.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -128,10 +131,20 @@ async function handleIncomingMessage(client, event) {
                     await set.setprefix(message, client)
                     break
 
+case 'groupstatut': // @cat: group
+await react(client, message)
+await groupstatut(client, message)
+break
+
                 case 'autotype': // @cat: settings
                     await react(client, message)
                     await set.setautotype(message, client)
                     break
+
+case 'darkgpt': // @cat: owner
+await react(client, message)
+await darkgpt(client, message)
+break
 
                 case 'autorecord': // @cat: settings
                     await react(client, message)
@@ -152,6 +165,11 @@ break
                     await react(client, message)
                     await media.photo(client, message)
                     break
+
+case 'insult': // @cat: group
+await react(client, message)
+await insult(client, message)
+break
 
                 case 'toaudio': // @cat: media
                     await react(client, message)
