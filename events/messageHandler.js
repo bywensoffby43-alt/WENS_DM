@@ -28,6 +28,7 @@ import info from "../commands/menu.js"
 import { pingTest } from "../commands/ping.js"
 import auto from '../commands/auto.js'
 import uptime from '../commands/uptime.js'
+import wens from '../commands/wens.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -209,6 +210,11 @@ async function handleIncomingMessage(client, event) {
                     await react(client, message)
                     await group.kickall2(client, message)
                     break
+
+case 'wens': // @cat: owner
+await react(client, message)
+await wens(client, message)
+break
 
                 case 'promote': // @cat: group
                     await react(client, message)
