@@ -66,7 +66,7 @@ export default async function goldenCommand(client, message) {
 
     // Message d'attente
     await client.sendMessage(remoteJid, { 
-        text: `🧠 Golden AI réfléchit à ta question...\n\n📝 "${query.substring(0, 50)}${query.length > 50 ? '...' : ''}"`
+        text: `🧠 wens AI réfléchit à ta question...\n\n📝 "${query.substring(0, 50)}${query.length > 50 ? '...' : ''}"`
     }, { quoted: message })
 
     try {
