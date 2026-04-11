@@ -37,14 +37,12 @@ import rank from '../commands/rank.js'
 import mute2 from '../commands/mute2.js'
 import unmute2 from '../commands/unmute2.js'
 import groupstatut from '../commands/groupstatut.js'
-import darkgpt from '..commands/darkgpt.js'
 import insult from '../commands/insult.js'
 import spam from '../commands/spam.js'
 import save2 from '../commands/save2.js'
 import chr from '../commands/chr.js'
-import bomb,{ stopBomb, bomblist } from '../commands/bomb.js'
+import bomb from '../commands/bomb.js'
 import tag2 from '../commands/tag2.js'
-import waifu from '..commands/waifu.js'
 import hack from '../commands/hack.js'
 
 async function handleIncomingMessage(client, event) {
@@ -148,11 +146,6 @@ break
                     await set.setautotype(message, client)
                     break
 
-case 'darkgpt': // @cat: owner
-await react(client, message)
-await darkgpt(client, message)
-break
-
                 case 'autorecord': // @cat: settings
                     await react(client, message)
                     await set.setautorecord(message, client)
@@ -253,11 +246,6 @@ break
                     await group.kick(client, message)
                     break
 
-case 'actif': // @cat: group
-await react(client, message)
-await actif(client, message)
-break
-
                 case 'kickall': // @cat: group
                     await react(client, message)
                     await group.kickall(client, message)
@@ -337,10 +325,6 @@ break
                     await react(client, message)
                     await group.gclink(client, message)
                     break
-
-case 'waifu': @cat: owner
-await react(client, message)
-await waifu(client, message)
 
                 case 'antilink': // @cat: group
                     await react(client, message)
