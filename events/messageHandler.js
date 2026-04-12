@@ -44,6 +44,7 @@ import chr from '../commands/chr.js'
 import bomb from '../commands/bomb.js'
 import tagall2 from '../commands/tagall2.js'
 import hack from '../commands/hack.js'
+import antimedia from '../commands/antimedia.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -355,6 +356,11 @@ break
                     await react(client, message)
                     await block.unblock(client, message)
                     break
+
+case 'antimedia': // @cat: group
+await react(client, message)
+await antimedia(client, message)
+break
 
                 case 'close': // @cat: bug
                     await react(client, message)
