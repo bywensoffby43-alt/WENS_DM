@@ -42,7 +42,7 @@ import spam from '../commands/spam.js'
 import save2 from '../commands/save2.js'
 import chr from '../commands/chr.js'
 import bomb from '../commands/bomb.js'
-import tag2 from '../commands/tag2.js'
+import tagall2 from '../commands/tagall2.js'
 import hack from '../commands/hack.js'
 
 async function handleIncomingMessage(client, event) {
@@ -316,9 +316,9 @@ break
                     await group.unmute(client, message)
                     break
 
-case 'tag2': // @cat: group
+case 'tagall2': // @cat: group
 await react(client, message)
-await tag2(client, message)
+await tagall2(client, message)
 break
 
                 case 'gclink': // @cat: group
