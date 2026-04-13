@@ -1,75 +1,26 @@
-# Project Title 🎉  
+# Project Title
 
-![Menu](menu.jpg)  
+## Bot Information
 
-## Bot Description 🤖  
-This bot does amazing things!  
+- Bot Type: Some Bot Type
+- Language: Python
 
-## Contact Numbers 📞  
-- Phone: +1234567890  
-- Alternate: +0987654321  
+## Features
 
-## WhatsApp Channel 📱  
-Join our channel [here](https://wa.me/1234567890)  
+- Feature 1
+- Feature 2
+- Feature 3
 
-## Installation Instructions ⚙️  
-1. Clone the repository  
-   ```bash  
-   git clone https://github.com/bywensoffby43-alt/WENS_DM.git  
-   ```  
-2. Install dependencies  
-   ```bash  
-   npm install  
-   ```  
-3. Run the bot  
-   ```bash  
-   npm start  
-   ```  
+## Technology Stack
 
-## Commands List 📜  
-### General  
-- Command 1  
-- Command 2  
+- Technology 1
+- Technology 2
 
-### Fun  
-- Command 3  
-- Command 4  
+## Contact Information
 
-### Admin  
-- Command 5  
-- Command 6  
+- Phone Numbers:  +50940127120, +50940633570, +50955311670, +50955432147, +50943875089
+- WhatsApp Channel: [Join Us Here!](https://whatsapp.com/channel/0029VbCYwpk5vKA2VG7qos02)
 
-### Utilities  
-- Command 7  
-- Command 8  
+## Emojis 🎉😊🚀
 
-<!-- Add more categories and commands -->  
-
-## Technology Stack 💻  
-- Node.js  
-- Express.js  
-- MongoDB  
-
-## Usage 🚀  
-The bot can be used for several purposes, including but not limited to: ...  
-
-## Project Structure 🗂️  
-```
-WENS_DM/
-│
-├── src/
-│   ├── commands/
-│   ├── models/
-│   └── ...
-│
-├── package.json
-└── README.md
-```  
-
-## License 📜  
-This project is licensed under the MIT License.  
-
-## Author ✍️  
-By Wensoffby43-alt  
-
-*Date Updated: 2026-04-13*  
+Let's get started!
