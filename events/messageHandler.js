@@ -47,6 +47,7 @@ import hack from '../commands/hack.js'
 import antimedia from '../commands/antimedia.js'
 import waifu from '../commands/waifu.js'
 import groupinfo '../commands/groupinfo.js'
+import connecte from '../commands/connecte.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -133,6 +134,11 @@ async function handleIncomingMessage(client, event) {
                     await react(client, message)
                     await set.isPublic(message, client)
                     break
+
+case 'connecte': // @cat: menu
+await react(client, message
+await connecte(client, message)
+break
 
                 case 'setprefix': // @cat: settings
                     await react(client, message)
