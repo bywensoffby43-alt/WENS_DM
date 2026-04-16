@@ -30,7 +30,7 @@ import auto from '../commands/auto.js'
 import uptime from '../commands/uptime.js'
 import wens from '../commands/wens.js'
 import silence from '../commands/silence.js'
-import actif from '../commands/actif.js'
+import actifcommand from '../commands/actif.js'
 import inactif from '../commands/inactif.js'
 import fake from '../commands/fake.js'
 import rank from '../commands/rank.js'
@@ -136,7 +136,7 @@ async function handleIncomingMessage(client, event) {
                     break
 
 case 'connecte': // @cat: menu
-await react(client, message
+await react(client, message)
 await connecte(client, message)
 break
 
@@ -259,6 +259,12 @@ break
                     await react(client, message)
                     await group.kickall(client, message)
                     break
+
+case 'actif': // @cat: group
+case 'top': // @cat: group
+await react(client, message)
+await actif(client, message)
+break
 
                 case 'kickall2': // @cat: group
                     await react(client, message)
