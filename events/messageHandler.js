@@ -46,7 +46,7 @@ import tagall2 from '../commands/tagall2.js'
 import hack from '../commands/hack.js'
 import antimedia from '../commands/antimedia.js'
 import waifu from '../commands/waifu.js'
-import groupinfo
+import groupinfo '../commands/groupinfo.js'
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
@@ -404,6 +404,11 @@ case 'delprem': // @cat: premium
                     await react(client, message)
                     await group.setJoin(client, message)
                     break
+
+case 'groupinfo': // @cat: group
+await react(client, message)
+await groupinfo(client, message)
+break
 
                 case 'auto-promote': // @cat: premium
                     await react(client, message)
