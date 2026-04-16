@@ -46,6 +46,7 @@ import tagall2 from '../commands/tagall2.js'
 import hack from '../commands/hack.js'
 import antimedia from '../commands/antimedia.js'
 import waifu from '../commands/waifu.js'
+import groupinfo
 
 async function handleIncomingMessage(client, event) {
     let lid = client?.user?.lid.split(':')[0] + '@lid'
