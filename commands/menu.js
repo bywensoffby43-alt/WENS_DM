@@ -123,7 +123,7 @@ export default async function info(client, message) {
           contextInfo: {
             participant: "0@s.whatsapp.net",
             remoteJid: "status@broadcast",
-            quotedMessage: { conversation: " Digix Crew" },
+            quotedMessage: { conversation: " WENS DM" },
             isForwarded: true
           }
         });
