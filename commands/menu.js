@@ -9,8 +9,6 @@ import stylizedChar from "../utils/fancy.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
-
 function formatUptime(seconds) {
   const h = Math.floor(seconds / 3600);
   const m = Math.floor((seconds % 3600) / 60);
@@ -30,26 +28,22 @@ function getCategoryIcon(category) {
   if (c === "owner") return "✨";
   if (c === "creator") return "👑";
 
-  return "🎯"; 
+  return "🌹";
 }
-
 
 export default async function info(client, message) {
   try {
     const remoteJid = message.key.remoteJid;
     const userName = message.pushName || "Unknown";
 
-    
     const usedRam = (process.memoryUsage().rss / 1024 / 1024).toFixed(1);
     const totalRam = (os.totalmem() / 1024 / 1024).toFixed(1);
     const uptime = formatUptime(process.uptime());
     const platform = os.platform();
 
-   
     const botId = client.user.id.split(":")[0];
     const prefix = configs.config.users?.[botId]?.prefix || "!";
 
-    
     const now = new Date();
     const daysFR = [
       "Dimanche",
@@ -61,16 +55,13 @@ export default async function info(client, message) {
       "Samedi"
     ];
 
-    const date =
-      `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`;
+    const date = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`;
     const day = daysFR[now.getDay()];
 
-    
     const handlerPath = path.join(__dirname, "../events/messageHandler.js");
-    const handlerCode = fs.readFileSync(handlerPath, "utf-8",);
+    const handlerCode = fs.readFileSync(handlerPath, "utf-8");
 
-    const commandRegex =
-      /case\s+['"](\w+)['"]\s*:\s*\/\/\s*@cat:\s*([^\n\r]+)/g;
+    const commandRegex = /case\s+['"](\w+)['"]\s*:\s*\/\/\s*@cat:\s*([^\n\r]+)/g;
 
     const categories = {};
     let match;
@@ -83,35 +74,45 @@ export default async function info(client, message) {
       categories[category].push(command);
     }
 
-    
-let menu = `
-WENS_DM-V1 🇭🇹
-────────────
-• Prefix   : ${prefix}
-• User     : ${stylizedChar(userName)}
-• Version  : 1.0.0
-• Uptime   : ${uptime}
-• RAM      : ${usedRam}/${totalRam} MB
-• Platform : ${platform}
-• Date     : ${date} - ${stylizedChar(day)}
-────────────
+    let menu = `
+╭━━〔 𝐖𝐄𝐍𝐒 𝐃𝐌 - 𝐕𝟏 〕━━⬣
+┃
+┃ 𖠁 User      : ${stylizedChar(userName)}
+┃ 𖠁 Prefix    : ${prefix}
+┃ 𖠁 Version   : 1.0.0
+┃ 𖠁 Uptime    : ${uptime}
+┃ 𖠁 Memory    : ${usedRam}/${totalRam} MB
+┃ 𖠁 Platform  : ${platform}
+┃ 𖠁 Date      : ${date}
+┃ 𖠁 Day       : ${stylizedChar(day)}
+┃
+╰━━━━━━━━━━━━━━━━⬣
 `;
 
     for (const [category, commands] of Object.entries(categories)) {
       const icon = getCategoryIcon(category);
       const catName = stylizedChar(category);
-      menu += `┏━━━ ${icon} ${catName} ━━━
+
+      menu += `
+╭─〔 ${icon} ${catName} 〕
 `;
-commands.forEach(cmd => {
-  menu += `┃   › ${stylizedChar(cmd)}\n`;
-});
-menu += `┗━━━━━━━━━━━━━━━
+
+      commands.forEach(cmd => {
+        menu += `│ ✦ ${stylizedChar(cmd)}\n`;
+      });
+
+      menu += `╰────────────⬣
 `;
     }
 
+    menu += `
+╭━━━━━━━━━━━━━━━━⬣
+┃ 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝐖𝐄𝐍𝐒 𝐃𝐌
+╰━━━━━━━━━━━━━━━━⬣
+`;
+
     menu = menu.trim();
 
-    
     try {
       const device = getDevice(message.key.id);
 
